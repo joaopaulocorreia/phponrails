@@ -1,0 +1,20 @@
+<div class='row'>
+  <div class='col col-4 mx-auto'>
+    <form action="?controller=Login&action=create" method="POST">
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="login[email]">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="login[password]">
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+</div>
+
+<pre>
+  {{ params.login.email ?? '' }}
+  {{ params.login.password ?? '' }}
+</pre>
